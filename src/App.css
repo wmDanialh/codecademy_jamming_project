@@ -1,0 +1,173 @@
+
+.App {
+  min-height: 100vh;
+  padding: 30px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 3rem;
+  margin-bottom: 5px;
+}
+
+header p {
+  color: #aaa;
+  margin-bottom: 30px;
+}
+
+.highlight {
+  color: #6c41ec;
+}
+
+.App-playlist {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 40px auto;
+}
+
+.SearchResults,
+.Playlist {
+  flex: 1;
+  min-width: 0;
+  min-height: 450px;
+  padding: 25px;
+  background: rgba(20, 20, 20, 0.85);
+  border-radius: 12px;
+  text-align: left;
+}
+
+.SearchResults h2,
+.Playlist h2 {
+  text-align: center;
+  margin-top: 0;
+}
+
+.SearchBar {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  max-width: 550px;
+  margin: auto;
+}
+
+.SearchBar input {
+  flex: 1;
+  min-width: 0;
+}
+
+.SearchBar input,
+.Playlist-name {
+  padding: 13px;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.SearchBar button,
+.Playlist-save {
+  padding: 13px 22px;
+  border: none;
+  border-radius: 6px;
+  background: #6c41ec;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.SearchBar button:hover,
+.Playlist-save:hover {
+  background: #805ef0;
+}
+
+.Track {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px 0;
+  border-bottom: 1px solid #444;
+}
+
+.Track-information {
+  flex: 1;
+  min-width: 0;
+}
+
+.Track-information h3 {
+  font-size: 16px;
+  margin: 0 0 5px;
+}
+
+.Track-information p {
+  color: #bbb;
+  font-size: 13px;
+  margin: 0 0 4px;
+}
+
+.Track-information small {
+  color: #888;
+}
+
+.Track-artwork {
+  width: 55px;
+  height: 55px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.Track-action {
+  border: none;
+  background: none;
+  color: white;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.Track-action:hover {
+  color: #6c41ec;
+}
+
+.Playlist-name {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.Playlist-save {
+  display: block;
+  width: 100%;
+  margin-top: 25px;
+}
+
+.Playlist-save:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.empty-message,
+.status,
+.error {
+  color: #aaa;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.error {
+  color: #ff8585;
+}
+
+@media (max-width: 750px) {
+  .App-playlist {
+    flex-direction: column;
+  }
+
+  .SearchResults,
+  .Playlist {
+    width: 100%;
+  }
+
+  .SearchBar {
+    flex-direction: column;
+  }
+}
